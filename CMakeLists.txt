@@ -116,7 +116,7 @@ foreach(target_name IN LISTS UVC_TARGETS)
   )
   target_link_libraries(${target_name}
     # libusb-1.0 used internally so we link to it privately.
-    PRIVATE LibUSB::LibUSB ${threads}
+    PUBLIC LibUSB::LibUSB ${threads}
   )
   if(JPEG_FOUND)
     target_link_libraries(${target_name}
